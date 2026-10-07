@@ -90,6 +90,34 @@
       max-width: 580px;
       margin-bottom: 48px;
     }
+    .showcase {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      align-items: center;
+      gap: 40px;
+      width: 100%;
+      margin-bottom: 48px;
+      text-align: left;
+    }
+    .showcase img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 36px;
+      border: 1px solid var(--border);
+      box-shadow: 0 24px 48px -16px rgba(0, 0, 0, 0.35);
+    }
+    .showcase h2 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .showcase p {
+      font-size: 17px;
+      color: var(--muted);
+    }
     .features {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -120,6 +148,13 @@
     }
     @media (max-width: 640px) {
       .features { grid-template-columns: 1fr; }
+      .showcase {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 28px;
+      }
+      .showcase img { max-width: 240px; }
     }
   </style>
 </head>
@@ -132,6 +167,19 @@
       Unlike other AI food trackers, MealsAI runs a small language model
       right on your phone, so your meals never leave your device.
     </p>
+    <figure class="showcase">
+      <img src="images/add-meal.png" width="472" height="1024"
+           alt="MealsAI Add Meal screen showing a photo of a vegetarian pizza with its estimated calories, protein, carbs and fat, plus warnings for high calories, fat, sodium and cholesterol">
+      <figcaption>
+        <h2>One photo, the full picture</h2>
+        <p>
+          Take a picture of what you're eating and MealsAI identifies the dish,
+          estimates calories, protein, carbs and fat, and flags anything to
+          watch out for, like high sodium or cholesterol. All of it is worked
+          out on your phone.
+        </p>
+      </figcaption>
+    </figure>
     <section class="features">
       <div class="feature">
         <h2>Private by design</h2>
